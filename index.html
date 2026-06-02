@@ -3,182 +3,157 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BUDDHA | SYSTEM ONLINE</title>
+<title>BUDDHA SYSTEM</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 body {
   margin: 0;
   font-family: 'Orbitron', sans-serif;
-  background: black;
-  color: white;
-  overflow: hidden;
-}
-
-/* LOADING SCREEN */
-#loader {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  z-index: 999;
-}
-
-.loader-text {
+  background: radial-gradient(circle, #050505, #000);
   color: #00ffcc;
-  font-size: 20px;
-  animation: flicker 1.5s infinite;
 }
 
-.bar {
-  width: 200px;
-  height: 2px;
-  background: #111;
-  margin-top: 20px;
-  overflow: hidden;
-}
-
-.bar::after {
-  content: "";
-  display: block;
-  width: 40%;
-  height: 100%;
-  background: #00ffcc;
-  animation: load 2s infinite;
-}
-
-@keyframes load {
-  0% {transform: translateX(-100%);}
-  100% {transform: translateX(250%);}
-}
-
-/* MAIN */
-#app {
-  display: none;
+/* HEADER */
+header {
   text-align: center;
-  padding: 20px;
+  padding: 25px 10px;
 }
 
-/* GLITCH TITLE */
-.glitch {
-  font-size: 50px;
-  color: #00ffcc;
-  margin-top: 40px;
-  text-shadow: 0 0 10px #00ffcc;
-  animation: flicker 2s infinite;
+.title {
+  font-size: 40px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 15px #00ffcc;
 }
 
-@keyframes flicker {
-  0%,100% {opacity: 1;}
-  50% {opacity: 0.5;}
+.subtitle {
+  color: #888;
+  font-size: 13px;
 }
 
-/* BUTTONS */
-.btn {
-  display: block;
-  margin: 12px auto;
-  width: 80%;
-  max-width: 300px;
-  padding: 12px;
-  border: 1px solid #00ffcc;
-  color: #00ffcc;
-  text-decoration: none;
+/* GRID */
+.container {
+  max-width: 650px;
+  margin: auto;
+  padding: 10px;
+}
+
+.card {
+  background: rgba(0,255,204,0.05);
+  border: 1px solid rgba(0,255,204,0.3);
+  border-radius: 12px;
+  padding: 15px;
+  margin: 12px 0;
   transition: 0.3s;
 }
 
-.btn:hover {
+.card:hover {
+  transform: scale(1.02);
+  border-color: #00ffcc;
+}
+
+/* BUTTONS */
+a {
+  display: block;
+  margin-top: 8px;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #00ffcc;
+  color: #00ffcc;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+a:hover {
   background: #00ffcc;
   color: black;
 }
 
-/* FLOAT BUDDHA */
-.float {
-  position: fixed;
-  font-size: 22px;
-  opacity: 0.2;
-  animation: floatUp 12s linear infinite;
-}
-
-@keyframes floatUp {
-  from {transform: translateY(100vh);}
-  to {transform: translateY(-10vh);}
-}
-
-/* BACKGROUND EFFECT */
-body::before {
-  content: "";
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, rgba(0,255,204,0.05), transparent);
-  pointer-events: none;
+/* VISITOR COUNTER */
+.counter {
+  text-align: center;
+  padding: 10px;
+  color: #aaa;
+  font-size: 14px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- LOADER -->
-<div id="loader">
-  <div class="loader-text">SYSTEM BOOTING BUDDHA...</div>
-  <div class="bar"></div>
+<header>
+  <div class="title">BUDDHA SYSTEM</div>
+  <div class="subtitle">Cyber Interface • Knowledge Network</div>
+</header>
+
+<div class="container">
+
+  <!-- 1. HOME / MANIFESTO -->
+  <div class="card">
+    <h3>🧠 IDENTITÉ</h3>
+    <p>
+      Dans un monde où le chaos domine, ce système représente une vision au-delà des limites.
+      <br><br>
+      <b>“Who decided that limits define us?”</b>
+      <br><br>
+      L’absolu n’a pas besoin de promesse — il existe déjà.
+    </p>
+  </div>
+
+  <!-- 2. RÉSEAUX -->
+  <div class="card">
+    <h3>📡 RÉSEAUX</h3>
+    <a href="https://instagram.com">Instagram</a>
+    <a href="https://facebook.com">Facebook</a>
+    <a href="https://wa.me">WhatsApp</a>
+  </div>
+
+  <!-- 3. PROJETS -->
+  <div class="card">
+    <h3>🔥 PROJETS</h3>
+    <a href="https://whatsapp.com/channel/0029Vb8AGqoCsU9MwkU2ZK3y">
+      Rejoindre la chaîne
+    </a>
+    <a href="#">Recrutement (bientôt actif)</a>
+  </div>
+
+  <!-- 4. UPDATES -->
+  <div class="card">
+    <h3>🚀 MISES À JOUR</h3>
+    <p>Aucune mise à jour pour le moment...</p>
+  </div>
+
+  <!-- 5. APPRENTISSAGE -->
+  <div class="card">
+    <h3>📘 APPRENTISSAGE EN LIGNE</h3>
+    <p>
+      Espace réservé aux nouveaux membres.
+      <br>
+      Prochainement : guides, ressources et formation digitale.
+    </p>
+  </div>
+
 </div>
 
-<!-- FLOATING BUDDHAS -->
-<div class="float" style="left:10%">🧘‍♂️</div>
-<div class="float" style="left:50%; animation-delay:3s;">🧘‍♂️</div>
-<div class="float" style="left:80%; animation-delay:6s;">🧘‍♂️</div>
-
-<!-- MAIN APP -->
-<div id="app">
-
-  <div class="glitch">BUDDHA SYSTEM</div>
-
-  <p>
-    Bienvenue dans l’univers digital de Buddha 🧘‍♂️<br>
-    Inspiré du chaos sacré de 
-    <b>0</b>
-  </p>
-
-  <h3>RÉSEAUX</h3>
-
-  <a class="btn" href="https://instagram.com">Instagram</a>
-  <a class="btn" href="https://facebook.com">Facebook</a>
-  <a class="btn" href="https://wa.me">WhatsApp</a>
-
-  <a class="btn" href="https://whatsapp.com/channel/0029Vb8AGqoCsU9MwkU2ZK3y">
-    🔥 Rejoindre la chaîne
-  </a>
-
-  <a class="btn">Recrutement (bientôt actif)</a>
-
-  <h3>CONTACT</h3>
-  <a class="btn">Mode privé activé 🔒</a>
-
+<!-- VISITOR COUNTER -->
+<div class="counter">
+  👁️ Visiteurs :
+  <span id="visits">0</span>
 </div>
-
-<!-- MUSIC -->
-<audio id="music" loop>
-  <source src="https://cdn.pixabay.com/download/audio/2022/10/16/audio_7c4b7d5c7b.mp3?filename=dark-ambient-11899.mp3" type="audio/mp3">
-</audio>
 
 <script>
-// loader
-window.onload = () => {
-  setTimeout(() => {
-    document.getElementById("loader").style.display = "none";
-    document.getElementById("app").style.display = "block";
+// VISITOR COUNTER (local device demo)
+let visits = localStorage.getItem("buddha_visits");
 
-    let music = document.getElementById("music");
-    music.volume = 0.4;
-    music.play();
-  }, 2500);
-};
+if (!visits) {
+  visits = 1;
+} else {
+  visits = parseInt(visits) + 1;
+}
+
+localStorage.setItem("buddha_visits", visits);
+document.getElementById("visits").innerText = visits;
 </script>
 
 </body>
